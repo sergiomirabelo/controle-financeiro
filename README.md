@@ -168,8 +168,6 @@ mvn spring-boot:run
 
 # 👨‍💻 Autor
 
-**Seu Nome**
-
 LinkedIn:www.linkedin.com/in/sergio-mirabelo
 
 GitHub:https://github.com/sergiomirabelo
