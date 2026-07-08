@@ -1,25 +1,28 @@
+<div align="center">
+
 # 💰 Controle Financeiro API
 
-<p align="center">
+### API REST desenvolvida com Spring Boot para gerenciamento financeiro pessoal.
 
-![Java](https://img.shields.io/badge/Java-21-red?style=for-the-badge&logo=openjdk)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-green?style=for-the-badge&logo=springboot)
-![MySQL](https://img.shields.io/badge/MySQL-8-blue?style=for-the-badge&logo=mysql)
-![JWT](https://img.shields.io/badge/JWT-Authentication-black?style=for-the-badge&logo=jsonwebtokens)
-![Hibernate](https://img.shields.io/badge/Hibernate-ORM-brown?style=for-the-badge&logo=hibernate)
-![Maven](https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven)
+![Java](https://img.shields.io/badge/Java-17-red?style=for-the-badge&logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.2-6DB33F?style=for-the-badge&logo=springboot)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6-6DB33F?style=for-the-badge&logo=springsecurity)
+![JWT](https://img.shields.io/badge/JWT-Authentication-black?style=for-the-badge)
+![Hibernate](https://img.shields.io/badge/Hibernate-JPA-brown?style=for-the-badge&logo=hibernate)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql)
+![Swagger](https://img.shields.io/badge/Swagger-OpenAPI-85EA2D?style=for-the-badge&logo=swagger)
 
-</p>
+</div>
 
 ---
 
-## 📖 Sobre o projeto
+# 📖 Sobre o projeto
 
-O **Controle Financeiro API** é uma aplicação desenvolvida em **Java + Spring Boot** para gerenciamento financeiro pessoal.
+O **Controle Financeiro API** é uma API REST desenvolvida para gerenciamento financeiro pessoal.
 
-A API permite que usuários realizem cadastro, autenticação segura via JWT, gerenciamento de categorias, transações financeiras e controle de orçamento mensal.
+O sistema permite cadastrar usuários, autenticar utilizando JWT, gerenciar categorias, registrar receitas e despesas, controlar orçamentos mensais e gerar relatórios financeiros.
 
-O objetivo deste projeto foi colocar em prática conceitos de desenvolvimento backend utilizados no mercado, como arquitetura em camadas, autenticação, banco de dados relacional e boas práticas com Spring.
+Todo o projeto foi desenvolvido utilizando boas práticas de arquitetura em camadas, DTOs e autenticação baseada em tokens.
 
 ---
 
@@ -27,204 +30,142 @@ O objetivo deste projeto foi colocar em prática conceitos de desenvolvimento ba
 
 ✅ Cadastro de usuários
 
-✅ Login com autenticação JWT
+✅ Login com JWT
 
-✅ Criptografia de senha com BCrypt
+✅ Autenticação com Spring Security
 
 ✅ CRUD de Categorias
 
 ✅ CRUD de Transações
 
-✅ CRUD de Orçamentos
+✅ Controle de Orçamentos
 
-✅ Relacionamento entre entidades
+✅ Relatórios Financeiros
 
-✅ DTOs para requisição e resposta
+✅ DTOs para requisições e respostas
 
-✅ Persistência utilizando MySQL
+✅ Tratamento global de exceções
 
-✅ API REST seguindo boas práticas
+✅ Documentação automática com Swagger
 
 ---
 
-# 🛠 Tecnologias utilizadas
+# 🛠 Tecnologias
 
-- Java 21
+- Java 17
 - Spring Boot
 - Spring Security
+- JWT
 - Spring Data JPA
 - Hibernate
-- JWT
-- BCrypt
 - MySQL
 - Maven
+- Swagger / OpenAPI
 
 ---
 
-# 📂 Estrutura do projeto
+# 📂 Estrutura do Projeto
 
-```
+
 src
-│
 ├── controller
 ├── dto
 ├── entity
 ├── repository
 ├── security
 ├── service
+├── exception
 └── config
-```
+
 
 ---
 
-# 🔐 Autenticação
+# 🔒 Autenticação
 
-A autenticação é realizada utilizando **JWT (JSON Web Token)**.
+A API utiliza autenticação baseada em **JWT (JSON Web Token)**.
 
 Fluxo:
 
 1. Cadastro do usuário
+
 2. Login
+
 3. Recebimento do Token JWT
-4. Envio do Token no Header
 
-```
-Authorization: Bearer SEU_TOKEN
-```
+4. Utilização do Token nas requisições protegidas
 
 ---
 
-# 📌 Principais Endpoints
+# 📑 Documentação
 
-## Usuários
+Após iniciar a aplicação:
 
-| Método | Endpoint |
-|---------|----------|
-| POST | /usuarios |
-| GET | /usuarios |
 
----
+http://localhost:8080/swagger-ui/index.html
 
-## Login
 
-| Método | Endpoint |
-|---------|----------|
-| POST | /login |
-
----
-
-## Categorias
-
-| Método | Endpoint |
-|---------|----------|
-| POST | /categorias |
-| GET | /categorias |
-| PUT | /categorias/{id} |
-| DELETE | /categorias/{id} |
-
----
-
-## Transações
-
-| Método | Endpoint |
-|---------|----------|
-| POST | /transacoes |
-| GET | /transacoes |
-| PUT | /transacoes/{id} |
-| DELETE | /transacoes/{id} |
-
----
-
-## Orçamentos
-
-| Método | Endpoint |
-|---------|----------|
-| POST | /orcamentos |
-| GET | /orcamentos |
-| PUT | /orcamentos/{id} |
-| DELETE | /orcamentos/{id} |
-
----
-
-# 🗄 Banco de Dados
-
-O projeto utiliza **MySQL**.
-
-Principais entidades:
-
-- Usuário
-- Categoria
-- Transação
-- Orçamento
-
-Relacionadas através de chaves estrangeiras utilizando JPA/Hibernate.
-
----
-
-# ▶ Como executar
-
-### Clone o projeto
-
-```bash
-git clone https://github.com/SEU_USUARIO/controle-financeiro-api.git
-```
-
-### Entre na pasta
-
-```bash
-cd controle-financeiro-api
-```
-
-### Configure o banco de dados
-
-Edite o arquivo:
-
-```
-application.properties
-```
-
-Configure:
-
-```
-spring.datasource.url=
-spring.datasource.username=
-spring.datasource.password=
-```
-
----
-
-### Execute
-
-```bash
-mvn spring-boot:run
-```
+Toda a documentação da API pode ser acessada diretamente pelo Swagger.
 
 ---
 
 # 📸 Demonstração
 
-> Em breve serão adicionadas imagens do Postman demonstrando as funcionalidades da API.
+## Swagger
+
+(coloque aqui um print)
 
 ---
 
-# 🎯 Objetivo
+## Login
 
-Este projeto foi desenvolvido com foco em estudos e fortalecimento do meu portfólio Backend, aplicando conceitos utilizados no desenvolvimento de APIs profissionais.
+(coloque aqui um print)
+
+---
+
+## Listagem de Transações
+
+(coloque aqui um print)
+
+---
+
+## Controle de Orçamentos
+
+(coloque aqui um print)
+
+---
+
+# ▶️ Como executar
+
+Clone o projeto
+
+
+git clone https://github.com/SEU_USUARIO/controle-financeiro.git
+
+
+Entre na pasta
+
+
+cd controle-financeiro
+
+
+Configure o banco MySQL e altere o arquivo:
+
+
+application.properties
+
+
+Execute:
+
+
+mvn spring-boot:run
+
 
 ---
 
 # 👨‍💻 Autor
 
-**Sergi**
+**Seu Nome**
 
 LinkedIn:
 
-*(adicione aqui seu perfil)*
-
 GitHub:
-
-*(adicione aqui seu GitHub)*
-
----
-
-⭐ Caso tenha gostado do projeto, deixe uma estrela no repositório.
