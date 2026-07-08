@@ -119,19 +119,22 @@ Toda a documentação da API pode ser acessada diretamente pelo Swagger.
 
 ## Login
 
-(coloque aqui um print)
+<img width="1171" height="891" alt="image" src="https://github.com/user-attachments/assets/28c75725-fe8d-40c5-b1a5-1a3dff7d5ced" />
+
 
 ---
 
 ## Listagem de Transações
 
-(coloque aqui um print)
+<img width="1188" height="961" alt="image" src="https://github.com/user-attachments/assets/70730f29-5b20-4754-8335-5d4dc7e8fb33" />
+
 
 ---
 
 ## Controle de Orçamentos
 
-(coloque aqui um print)
+<img width="1197" height="888" alt="image" src="https://github.com/user-attachments/assets/060ba5f4-23a2-4d88-86fd-09dbbc21ee18" />
+
 
 ---
 
@@ -167,6 +170,6 @@ mvn spring-boot:run
 
 **Seu Nome**
 
-LinkedIn:
+LinkedIn:www.linkedin.com/in/sergio-mirabelo
 
-GitHub:
+GitHub:https://github.com/sergiomirabelo
