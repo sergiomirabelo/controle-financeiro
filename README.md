@@ -112,7 +112,8 @@ Toda a documentação da API pode ser acessada diretamente pelo Swagger.
 
 ## Swagger
 
-(coloque aqui um print)
+<img width="1193" height="962" alt="image" src="https://github.com/user-attachments/assets/181bfe7a-02a0-4b0f-a671-ba51883e42dc" />
+
 
 ---
 
